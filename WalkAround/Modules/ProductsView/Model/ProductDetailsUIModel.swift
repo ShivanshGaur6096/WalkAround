@@ -10,7 +10,7 @@ import Foundation
 struct ProductDetailsUIModel: Decodable {
     let id: Int
     let title: String
-    let price: Double // Not Double as decimal value will not so long
+    let price: Double
     let description: String
     let category: String
     let image: String
