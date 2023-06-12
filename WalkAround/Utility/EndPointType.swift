@@ -27,16 +27,16 @@ extension EndPointItems: EndPointType {
     var path: String {
         switch self {
         case .product:
-            return "products"
+            return Constants.APIParams.kProductPath
         case .carts:
-            return "carts"
+            return Constants.APIParams.kCartPath
         case .users:
-            return "users"
+            return Constants.APIParams.kUsersPath
         }
     }
 
     var baseURL: String {
-        return "https://fakestoreapi.com/"
+        return Constants.APIParams.kBaseURL
     }
 
     var url: URL? {
