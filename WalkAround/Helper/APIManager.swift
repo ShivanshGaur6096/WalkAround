@@ -24,16 +24,17 @@ enum DataError: Error {
     case network(Error?)
 }
 
-typealias Handler = (Result<[ProductDetailsUIModel], DataError>) -> Void
+typealias Handler<T> = (Result<T, DataError>) -> Void
 
 final class APIManager {
     static let shared = APIManager()
     private init() {}
 
-    func fetchProducts(completion: @escaping Handler) {
-
+    func request<T: Decodable>(modelType: T.Type,
+                               type: EndPointType,
+                               completion: @escaping Handler<T>) {
         /// Check URL
-        guard let url = URL(string: Constants.APIParams.kProductsURL) else {
+        guard let url = type.url else {
             completion(.failure(.invalideURL))
             return
         }
@@ -47,12 +48,13 @@ final class APIManager {
             /// Check Response
             guard let response = response as? HTTPURLResponse,
                   200 ... 299 ~= response.statusCode else {
+                
                 completion(.failure(.invalidResopnse))
                 return
             }
 
             do{
-                let products = try JSONDecoder().decode([ProductDetailsUIModel].self, from: data)
+                let products = try JSONDecoder().decode(modelType, from: data)
                 completion(.success(products))
             } catch {
                 completion(.failure(.network(error)))

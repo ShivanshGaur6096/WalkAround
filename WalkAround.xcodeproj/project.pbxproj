@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		204862622A3799060011D6BA /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204862612A3799060011D6BA /* EndPointType.swift */; };
 		20C6D8C82A24DD1C00B4CE48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6D8C72A24DD1C00B4CE48 /* AppDelegate.swift */; };
 		20C6D8CA2A24DD1C00B4CE48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6D8C92A24DD1C00B4CE48 /* SceneDelegate.swift */; };
 		20C6D8CF2A24DD1C00B4CE48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C6D8CD2A24DD1C00B4CE48 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		204862612A3799060011D6BA /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		20C6D8C42A24DD1C00B4CE48 /* WalkAround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkAround.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C6D8C72A24DD1C00B4CE48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20C6D8C92A24DD1C00B4CE48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		204862602A3798DA0011D6BA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				204862612A3799060011D6BA /* EndPointType.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		20C6D8BB2A24DD1C00B4CE48 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 			children = (
 				20C6D8FA2A29CCC500B4CE48 /* Application */,
 				20C6D8FB2A29CD1800B4CE48 /* Constant */,
+				204862602A3798DA0011D6BA /* Utility */,
 				20C6D8FC2A29CD3700B4CE48 /* Extensions */,
 				20C6D9002A29CEA700B4CE48 /* Helper */,
 				20C6D8FD2A29CD5000B4CE48 /* Storyboard */,
@@ -390,6 +401,7 @@
 				20C6D90D2A29F25400B4CE48 /* Constants.swift in Sources */,
 				20C6D9112A2A41C700B4CE48 /* ProductViewModel.swift in Sources */,
 				20C6D8CA2A24DD1C00B4CE48 /* SceneDelegate.swift in Sources */,
+				204862622A3799060011D6BA /* EndPointType.swift in Sources */,
 				20C6D9142A2CFB4900B4CE48 /* ProductCell.swift in Sources */,
 				20C6D90F2A2A3E9C00B4CE48 /* ProductListViewController.swift in Sources */,
 				20C6D8D22A24DD1C00B4CE48 /* WalkAround.xcdatamodeld in Sources */,

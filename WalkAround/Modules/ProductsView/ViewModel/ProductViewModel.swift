@@ -14,7 +14,8 @@ class ProductViewModel {
 
     func fetchProducts() {
         self.eventHandler?(.loading)
-        APIManager.shared.fetchProducts { response in
+        APIManager.shared.request(modelType: [ProductDetailsUIModel].self,
+                                  type: EndPointItems.product) { response in
             self.eventHandler?(.stopLoading)
             switch response {
             case .success(let product):
