@@ -22,7 +22,7 @@ extension ProductListViewController {
 
     func configuration() {
         productList.register(UINib(nibName: "ProductCell", bundle: nil),
-                             forCellReuseIdentifier: Constants.VCIdentifier.kProductsCellId)
+                             forCellReuseIdentifier: AppConstants.VCIdentifier.kProductsCellId)
         initViewModel()
         observEvent()
     }
@@ -59,7 +59,7 @@ extension ProductListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VCIdentifier.kProductsCellId) as? ProductCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.VCIdentifier.kProductsCellId) as? ProductCell else { return UITableViewCell() }
         let products = viewModel.products[indexPath.row]
         cell.set(products: products)
         cell.selectionStyle = .none
