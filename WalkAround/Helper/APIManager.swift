@@ -16,7 +16,7 @@
 /// `let manager = APIManager(); manager.functionName()`
 
 
-import UIKit
+import Foundation
 
 enum DataError: Error {
     case invalideURL
@@ -30,7 +30,7 @@ final class APIManager {
     static let shared = APIManager()
     private init() {}
 
-    func request<T: Decodable>(modelType: T.Type,
+    func request<T: Codable>(modelType: T.Type,
                                type: EndPointType,
                                completion: @escaping Handler<T>) {
         /// Check URL
@@ -38,8 +38,18 @@ final class APIManager {
             completion(.failure(.invalideURL))
             return
         }
+// MARK: - All done for POST Method
+        var request = URLRequest(url: url)
+        request.httpMethod = type.methods.rawValue
 
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        if let parameters = type.body {
+            request.httpBody = try? JSONEncoder().encode(parameters)
+        }
+
+        request.allHTTPHeaderFields = type.headers
+// MARK: - END Of POST Method Configuration
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data, error == nil else {
                 completion(.failure(.network(error)))
                 return

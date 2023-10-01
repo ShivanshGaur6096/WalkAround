@@ -34,6 +34,6 @@ extension ProductViewModel {
         case loading
         case stopLoading
         case dataLoading
-        case error(_ error: Error?)
+        case error(Error?)
     }
 }

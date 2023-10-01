@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductDetailsUIModel: Decodable {
+struct ProductDetailsUIModel: Codable {
     let id: Int
     let title: String
     let price: Double
@@ -17,7 +17,7 @@ struct ProductDetailsUIModel: Decodable {
     let rating: RatingModel
 }
 
-struct RatingModel: Decodable {
+struct RatingModel: Codable {
     let rate: Double
     let count: Int
 }

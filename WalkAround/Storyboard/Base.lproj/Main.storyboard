@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J7h-Hq-6SA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J7h-Hq-6SA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,14 +35,97 @@
                             <constraint firstItem="46m-PK-X8J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qtX-az-cDy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Products" id="t00-0F-OjD"/>
+                    <navigationItem key="navigationItem" title="Products" id="t00-0F-OjD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zpL-GW-Bnh">
+                            <connections>
+                                <action selector="addProductButtonTapped:" destination="BYZ-38-t0r" id="Jz5-Ay-Vbf"/>
+                                <segue destination="3wR-B7-Res" kind="popoverPresentation" popoverAnchorBarButtonItem="zpL-GW-Bnh" id="cRI-k1-do8">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="productList" destination="46m-PK-X8J" id="1T2-Xy-iqE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="947.32824427480909" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="747" y="4"/>
+        </scene>
+        <!--Add Product View Controller-->
+        <scene sceneID="jFO-ww-D4H">
+            <objects>
+                <viewController id="3wR-B7-Res" customClass="AddProductViewController" customModule="WalkAround" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="laN-DC-c4D">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTp-xi-f1N">
+                                <rect key="frame" x="137" y="398.66666666666669" width="119.33333333333331" height="44.666666666666686"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Product" titlePadding="-3" cornerStyle="capsule" titleAlignment="trailing">
+                                    <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="5">
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <color key="strokeColor" systemColor="opaqueSeparatorColor"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedSubtitle">
+                                        <fragment content="Beta">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" metaFont="smallSystem"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addProductButton:" destination="3wR-B7-Res" eventType="touchUpInside" id="Zyb-Il-uXz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Product Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgR-dT-FVm">
+                                <rect key="frame" x="20" y="20" width="353" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work in Porgress for UI to add your product and get them listed instantly after some small checks form system." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9H-jq-F0J">
+                                <rect key="frame" x="20" y="94" width="353" height="61"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtD-Rk-ncs">
+                                <rect key="frame" x="40" y="277" width="313" height="101.66666666666669"/>
+                                <string key="text">To test the functionality, and to verify the implementation "Click on button below" and check the debug console if the product is added or not. Happy Debugging</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ly9-iQ-syx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EtD-Rk-ncs" secondAttribute="trailing" constant="40" id="11z-Ak-mJS"/>
+                            <constraint firstItem="RTp-xi-f1N" firstAttribute="top" secondItem="EtD-Rk-ncs" secondAttribute="bottom" constant="20" id="44Z-yX-m6b"/>
+                            <constraint firstItem="t9H-jq-F0J" firstAttribute="top" secondItem="pgR-dT-FVm" secondAttribute="bottom" constant="40" id="4VC-qk-kHJ"/>
+                            <constraint firstItem="pgR-dT-FVm" firstAttribute="top" secondItem="ly9-iQ-syx" secondAttribute="top" constant="20" id="8Bm-Nm-8yS"/>
+                            <constraint firstItem="pgR-dT-FVm" firstAttribute="leading" secondItem="ly9-iQ-syx" secondAttribute="leading" constant="20" id="Pje-nX-kPr"/>
+                            <constraint firstItem="EtD-Rk-ncs" firstAttribute="leading" secondItem="ly9-iQ-syx" secondAttribute="leading" constant="40" id="U6l-ZD-P7m"/>
+                            <constraint firstItem="RTp-xi-f1N" firstAttribute="centerX" secondItem="laN-DC-c4D" secondAttribute="centerX" id="UoG-XU-2K1"/>
+                            <constraint firstItem="t9H-jq-F0J" firstAttribute="trailing" secondItem="pgR-dT-FVm" secondAttribute="trailing" id="Uz6-pw-M8K"/>
+                            <constraint firstItem="t9H-jq-F0J" firstAttribute="leading" secondItem="pgR-dT-FVm" secondAttribute="leading" id="Wrk-zZ-NJ6"/>
+                            <constraint firstItem="RTp-xi-f1N" firstAttribute="centerY" secondItem="laN-DC-c4D" secondAttribute="centerY" id="dLC-tC-HAq"/>
+                            <constraint firstItem="ly9-iQ-syx" firstAttribute="trailing" secondItem="pgR-dT-FVm" secondAttribute="trailing" constant="20" id="iF3-Nz-LAD"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CIA-c5-Dji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q4d-KS-QNk">
@@ -64,8 +147,17 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

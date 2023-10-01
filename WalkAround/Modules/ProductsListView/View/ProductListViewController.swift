@@ -11,10 +11,14 @@ class ProductListViewController: UIViewController {
 
     @IBOutlet weak var productList: UITableView!
     private var viewModel = ProductViewModel()
+    private var addProductViewModel = AddProductViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configuration()
+    }
+    @IBAction func addProductButtonTapped(_ sender: UIBarButtonItem) {
+        
     }
 }
 
@@ -51,7 +55,6 @@ extension ProductListViewController {
         }
     }
 }
-
 
 extension ProductListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

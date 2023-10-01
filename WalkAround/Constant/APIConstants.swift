@@ -9,10 +9,12 @@
 public struct APIConstants {
     struct APIParams {
         public static let kBaseURL = "https://fakestoreapi.com/"
+        public static let kAddProductBaseURL = "https://dummyjson.com/"
     }
 
     struct APIPath {
         public static let kProductPath = "products"
+        public static let kAddProductPath = "products/add"
         public static let kCartPath = "carts"
         public static let kUsersPath = "users"
     }
