@@ -18,7 +18,7 @@
   - [Installation](#installation)
 - [Architecture](#architecture)
 - [Dependencies](#dependencies)
-- [Usage](#usage)
+- [Usage - InApp Purchase](#usage)
 - [Contributing](#contributing)
 
 ## Introduction
@@ -82,6 +82,21 @@ WalkAround relies on the following external libraries:
 ## Usage
 Feel free to use and customize WalkAround for your own online shopping project. You can easily modify the product catalog, appearance, and behavior to suit your needs.
 
+### InAppPurchase Usage
+To add your own product 
+```
+import StoreKit
+// Add your own product here and add it in Configuration.storekit to test it on simulator
+    enum Product: String, CaseIterable {
+        case becomePrimeMember = "com.myapp.primeMembership"
+        case buyEarlyAccessPass = "com.myapp.earlyAccessPass"
+    }
+```
+To use InApp purchase and see the product listen in Configuration file. 
+Edit Scheme > Run(Degug) > Options > Select Configuration.storekit file in StoreKit configuration.
+and to manage transactions go to Xcode Debug > StoreKit > Manage Transactions...
+
+### Colour Extension Usage
 To use the custom color extension, simply import the extension file and use it to define colors in your app using hex values.
 
 ```swift
