@@ -1,4 +1,12 @@
+<img src="https://github.com/ShivanshGaur6096/WalkAround/assets/39719492/5e3e0ab4-ffb8-4bec-ac93-fb614c22648c.png" width="10%" height="10%"> 
+
 # WalkAround - Online Shopping iOS Application
+
+<img src="https://github.com/ShivanshGaur6096/WalkAround/assets/39719492/e3486d29-f97e-4b5e-a40a-d592a0b9a1a4.png" width="35%" height="35%">
+<img src="https://github.com/ShivanshGaur6096/WalkAround/assets/39719492/500072c0-d38e-412c-b9ed-def3c069ba38.png" width="35%" height="35%">
+<img src="https://github.com/ShivanshGaur6096/WalkAround/assets/39719492/3122c957-b6a3-4e35-9701-20b0f654cb25.png" width="35%" height="35%">
+<img src="https://github.com/ShivanshGaur6096/WalkAround/assets/39719492/4f1880b7-4b52-4d10-a74c-23a167261e10.png" width="35%" height="35%">
+
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -26,9 +34,11 @@ WalkAround leverages the Kingfisher 7.7.0 library to efficiently download and ca
 ## Features
 - User-friendly online shopping interface.
 - Efficient image loading and caching using Kingfisher.
+- In-App Purchase of Prime membership.
 - Product catalog with detailed descriptions.
 - Custom color extension for simple hex value color usage.
 - Using Constants file reduce the amount of mistakes such as typing in the wrong code and access file globally
+- All the images used in this app were AI generated from [Playground AI](https://playgroundai.com/)
 
 ## Upcoming Features
 - Seamless navigation and checkout process.
