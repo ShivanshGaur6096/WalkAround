@@ -24,7 +24,7 @@ protocol EndPointType {
 
 enum EndPointItems {
     case product, carts, users
-    case addProduct(product: AddProduct)
+    case addProduct(product: ProductDetailsUIModel)
 }
 
 extension EndPointItems: EndPointType {

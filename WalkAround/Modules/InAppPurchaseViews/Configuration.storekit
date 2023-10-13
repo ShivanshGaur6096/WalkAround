@@ -1,0 +1,48 @@
+{
+  "identifier" : "55B8A824",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "087AD97D",
+      "localizations" : [
+        {
+          "description" : "Many Benifits Of Purchasing Prime Membership",
+          "displayName" : "Buy Prime Membership",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.myapp.primeMembership",
+      "referenceName" : "Prime Membership",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "6412F8B1",
+      "localizations" : [
+        {
+          "description" : "Buy Product 8hrs before sale starts",
+          "displayName" : "Sale Early Access Pass",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.myapp.earlyAccessPass",
+      "referenceName" : "Sale Early Access",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

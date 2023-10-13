@@ -11,5 +11,6 @@ public struct AppConstants {
 
     struct VCIdentifier {
         public static let kProductsCellId = "ProductCell"
+        public static let kInAppPurchaseCellId = "InAppPurchaseCell"
     }
 }

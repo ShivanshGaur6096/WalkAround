@@ -8,18 +8,20 @@
 import Foundation
 
 class AddProductViewModel {
-    var eventHandler: ((_ event: Event) -> Void)?
 
     enum Event {
         case loading
         case stopLoading
         case dataLoading
         case error(Error?)
-        case newProductAdded(product: AddProduct)
+        case newProductAdded(product: ProductDetailsUIModel)
     }
 
-    func addProducts(parameters: AddProduct) {
-        APIManager.shared.request(modelType: AddProduct.self,
+    var eventHandler: ((_ event: Event) -> Void)?
+
+    func addProducts(parameters: ProductDetailsUIModel) {
+        self.eventHandler?(.loading)
+        APIManager.shared.request(modelType: ProductDetailsUIModel.self,
                                   type: EndPointItems.addProduct(product: parameters)) { result in
             switch result {
             case .success(let product):

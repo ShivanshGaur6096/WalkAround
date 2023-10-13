@@ -8,7 +8,7 @@
 import Foundation
 
 struct ProductDetailsUIModel: Codable {
-    let id: Int
+    let id: Int? = nil
     let title: String
     let price: Double
     let description: String

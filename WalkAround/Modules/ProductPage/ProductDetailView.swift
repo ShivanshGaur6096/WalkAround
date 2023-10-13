@@ -15,37 +15,38 @@ struct ProductDetailView: View {
 //    }
 
     var body: some View {
-        VStack {
-            List {
-                Text(product.title)
-                Text(product.description)
-                Text(String(product.price))
-                Text(String(product.rating.rate))
-            }.listRowSeparator(.hidden)
-
-            HStack(alignment: .center) {
-                // Button Add to Cart
-                Button {
-                    // Action
-                } label: {
-                    Text("Add to Cart")
-                }
-                Spacer()
-                // Button Buy Now
-                Button {
-                    // Action
-                } label: {
-                    Text("Buy Now")
-                }.background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.yellow)
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.orange, lineWidth: 2)
-                )
-            }.padding()
-        }
+        Text("hello")
+//        VStack {
+//            List {
+//                Text(product.title)
+//                Text(product.description)
+//                Text(String(product.price))
+//                Text(String(product.rating.rate))
+//            }.listRowSeparator(.hidden)
+//
+//            HStack(alignment: .center) {
+//                // Button Add to Cart
+//                Button {
+//                    // Action
+//                } label: {
+//                    Text("Add to Cart")
+//                }
+//                Spacer()
+//                // Button Buy Now
+//                Button {
+//                    // Action
+//                } label: {
+//                    Text("Buy Now")
+//                }.background(
+//                    RoundedRectangle(cornerRadius: 10)
+//                        .fill(Color.yellow)
+//                )
+//                .overlay(
+//                    RoundedRectangle(cornerRadius: 10)
+//                        .stroke(Color.orange, lineWidth: 2)
+//                )
+//            }.padding()
+//        }
     }
 }
 

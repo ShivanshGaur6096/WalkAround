@@ -8,6 +8,12 @@
 import Foundation
 
 class ProductViewModel {
+    enum Event {
+        case loading
+        case stopLoading
+        case dataLoading
+        case error(Error?)
+    }
 
     var products: [ProductDetailsUIModel] = []
     var eventHandler: ((_ event: Event) -> Void)? // Data binding Closure
@@ -25,15 +31,5 @@ class ProductViewModel {
                 self.eventHandler?(.error(error))
             }
         }
-    }
-}
-
-extension ProductViewModel {
-
-    enum Event {
-        case loading
-        case stopLoading
-        case dataLoading
-        case error(Error?)
     }
 }
